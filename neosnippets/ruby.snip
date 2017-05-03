@@ -1,3 +1,11 @@
 snippet map
 options word
-  map {|${1:#:variable}| ${2} }
+  map { |${1:#:variable}| ${2} }
+
+snippet each
+options word
+  each { |${1:#:variable}| ${2} }
+
+snippet ewi
+options word
+  each_with_index { |${1:#:variable}, i| ${2} }
