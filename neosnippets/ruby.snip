@@ -9,3 +9,29 @@ options word
 snippet ewi
 options word
   each_with_index { |${1:#:variable}, i| ${2} }
+
+snippet if
+options head
+  if ${1}
+    ${2}
+  end
+
+snippet ife
+options head
+  if ${1}
+    ${2}
+  else
+    ${3}
+  end
+
+snippet class
+options head
+  class ${1:`substitute(expand('%:t:r:r:r'), '\v%(^(.)|_(.))', '\u\1\u\2', 'g')`}
+    ${0}
+  end
+
+snippet module
+options head
+  module ${1:`substitute(expand('%:t:r:r:r'), '\v%(^(.)|_(.))', '\u\1\u\2', 'g')`}
+    ${0}
+  end
