@@ -1,29 +1,31 @@
 snippet cl
 options head
-  console.log(${1});
+  console.log(${0});
 
 snippet f
 options word
-  function (${1}) { ${0:TARGET} };
+  function ${1} (${2}) {
+    ${0}
+  }
 
 snippet if
 options head
-  if (${1:true}) {
-    ${0:TARGET}
+  if (${1}) {
+    ${0}
   }
 
 snippet ife
 options head
   if (${1:#:condition}) {
-    ${2:TARGET}
+    ${2}
   } else {
-    ${3}
+    ${0}
   }
 
 snippet for
 options head
   for (var ${1:i} = 0; $1 < ${2:#:Things}.length; ++$1) {
-    ${0:TARGET}
+    ${0}
   }
 
 snippet forin

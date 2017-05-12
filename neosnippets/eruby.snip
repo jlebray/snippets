@@ -1,13 +1,19 @@
 snippet if
 options head
   <% if ${1} %>
-    ${2}
+    ${0}
   <% end %>
 
 snippet ife
 options head
   <% if ${1} %>
-    ${2}
+    ${0}
   <% else %>
   <% end %>
+
+snippet rr
+  <% ${0} %>
+
+snippet r=
+  <%= ${0} %>
 
