@@ -1,0 +1,73 @@
+snippet map
+options word
+  map { |${1:#:variable}| ${2} }
+
+snippet each
+options word
+  each { |${1:#:variable}| ${2} }
+
+snippet ewi
+options word
+  each_with_index { |${1:#:variable}, i| ${2} }
+
+snippet if
+options head
+  if ${1}
+    ${2}
+  end
+
+snippet ife
+options head
+  if ${1}
+    ${2}
+  else
+    ${3}
+  end
+
+snippet class
+options head
+  class ${1:`substitute(expand('%:t:r:r:r'), '\v%(^(.)|_(.))', '\u\1\u\2', 'g')`}
+
+    ${0}
+
+  end
+
+snippet module
+options head
+  module ${1:`substitute(expand('%:t:r:r:r'), '\v%(^(.)|_(.))', '\u\1\u\2', 'g')`}
+    ${0}
+  end
+
+snippet des
+options head
+  describe '${1}' do
+    ${0}
+  end
+
+snippet con
+options head
+  context '${1}' do
+    ${0}
+  end
+
+snippet it
+options head
+  it '${1}' do
+    ${0}
+  end
+
+snippet exp
+options head
+  expect(${1}).to ${0}
+
+snippet expl
+options head
+  expect {
+    ${1}
+  }.to ${0}
+
+snippet let
+options head
+  let(:${1}) { ${0} }
+
+
