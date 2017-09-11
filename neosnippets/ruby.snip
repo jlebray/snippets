@@ -40,34 +40,40 @@ options head
 
 snippet des
 options head
-  describe '${1}' do
+  describe "${1}" do
     ${0}
   end
 
 snippet con
 options head
-  context '${1}' do
-    ${0}
+  context "${1}" do
+    ${2}
   end
 
 snippet it
 options head
-  it '${1}' do
-    ${0}
+  it "${1}" do
+    ${2}
+  end
+
+snippet spe
+options head
+  specify "${1}" do
+    ${2}
   end
 
 snippet exp
 options head
-  expect(${1}).to ${0}
+  expect(${1}).to ${2}
 
 snippet expl
 options head
   expect {
     ${1}
-  }.to ${0}
+  }.to ${2}
 
 snippet let
 options head
-  let(:${1}) { ${0} }
+  let(:${1}) { ${2} }
 
 

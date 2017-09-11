@@ -12,8 +12,13 @@ options head
   <% end %>
 
 snippet rr
+options word
   <% ${0} %>
 
 snippet r=
+options word
   <%= ${0} %>
 
+snippet 18
+options word
+  <%= I18n.t(:${0}) %>
