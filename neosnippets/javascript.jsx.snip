@@ -1,0 +1,32 @@
+snippet initfile
+options head
+  (function () {
+    ${0}
+  })();
+
+snippet ready
+options head
+  $(document).ready(function () {
+    ${0}
+  });
+
+snippet reactinit
+options head
+  // @flow
+
+  import React, { Component } from "react";
+
+  type Props = {
+  };
+
+  class `substitute(expand('%:t:r:r:r'), '\v%(^(.)|_(.))', '\u\1\u\2', 'g')` extends Component<Props> {
+    render() {
+      return (
+        <div className="`substitute(expand('%:t:r:r:r'), '\v%(^(.)|_(.))', '\u\1\u\2', 'g')`">
+          ${0}
+        </div>
+      );
+    }
+  }
+
+  export default `substitute(expand('%:t:r:r:r'), '\v%(^(.)|_(.))', '\u\1\u\2', 'g')`;
