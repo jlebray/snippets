@@ -32,7 +32,7 @@ options head
 
   end
 
-snippet module
+snippet mod
 options head
   module ${1:`substitute(expand('%:t:r:r:r'), '\v%(^(.)|_(.))', '\u\1\u\2', 'g')`}
     ${0}
@@ -84,9 +84,23 @@ snippet let
 options head
   let(:${1}) { ${0} }
 
+snippet letl
+options head
+  let(:${1}) do
+    ${0}
+  end
+
+snippet leti
+options head
+  let_it_be(:${1}) { ${0} }
+
+snippet letc
+options head
+  let_it_be(:company) { PrebuiltFactory.get(:company) }
+
 snippet sub
 options head
-  subject { ${0} }
+  subject(:${1}) { ${0} }
 
 snippet shebang
 options head
